@@ -1,33 +1,42 @@
-#ifndef Pet_H
-#define Pet_H
 #include <iostream>
-#include <iomanip>
-#include <string>
+#include "Pet.h"
 using namespace std;
 
-class pet {
+    pet::pet() {
+        name = "N'A";
+        age = 0;
+        owner = "N/A";
+        isHouseTrained = false;
+    }
+    pet::pet(string name, int age, string owneer, bool isHouseTrained){
+        this->name = name;
+        this->age = age;
+        this->owner = owner;
+        this ->isHouseTrained = isHouseTrained;
+    }
 
-public:
+    string pet::getName() const {
+        return name;
+    };
+    int pet::getAge() const {
+        return age;
+    }
+    string pet::getOwner() const{
+        return owner;
+    }
+    bool pet::getisHouseTrained() const {
+        return isHouseTrained;
+    }
 
-    pet();
-    pet (string name, int age, string owner, bool isHouseTrained);
-
-    //mutator functions
-    void updateName (string new_name);
-    void updateAge ();
-    void updateOwner (string new_owner);
-    void updateisHouseTrained ();
-
-    //accessor functions
-    string getName() const;
-    int getAge() const;
-    string getOwner () const;
-    bool getisHouseTrained() const;
-
-private:
-    string name;
-    int age;
-    string owner;
-    bool isHouseTrained;
-};
-#endif
+    void pet::updateName (string new_name){
+        name = new_name;
+    }
+    void pet::updateAge () {
+       age++;
+    }
+    void pet::updateOwner (string new_owner){
+        owner = new_owner;
+    }
+    void pet:: updateisHouseTrained() {
+        isHouseTrained = true;
+    }
