@@ -5,7 +5,7 @@
  * @brief Construct a new Pokemon:: Pokemon object
  * 
  */
-Pokemon ::Pokemon(){
+Pokemon::Pokemon(){
     name = "unidentified";
     hp = 0;
     attack = 0;
@@ -21,7 +21,7 @@ Pokemon ::Pokemon(){
  * @param def
  * @param type
  */
-Pokemon::Pokemon(string name, int hp, int def, vector<string> type){
+Pokemon::Pokemon(string name, int hp, int att, int def, vector<string> type){
     this->name = name;
     this->hp = hp;
     attack = att;
@@ -39,10 +39,10 @@ void Pokemon::speak(){
 }
 
 
-Void Pokemon::printStats(){
-    printf("Name:%s\t HP: %i\t ATT: %i\n", name.c_str(), hp, dedfense, attack);
+void Pokemon::printStats(){
+    printf("Name:%s\t HP: %i\t DEF: %i\t ATT: %i\n", name.c_str(), hp, defense, attack);
     cout << "Type:";
-    for (int i=0; i = 0; i < type.size(); i++){
+    for (int i = 0; i < type.size(); i++){
         cout << type[i] << "\t";
     }
     cout << endl;

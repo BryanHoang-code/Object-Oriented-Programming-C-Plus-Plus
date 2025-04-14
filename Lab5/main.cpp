@@ -13,8 +13,8 @@
 
 #include <iostream>
 #include "Charmander.h"
-using namespace std();
-int man()
+using namespace std;
+int main()
 {
     // Charmander first = Charmander ();
     vector<string> pokemonType;
